@@ -1,0 +1,19 @@
+{
+    "name": "Terraform Development Container",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.tabSize": 2,
+                "files.trimTrailingWhitespace": true
+            },
+            "extensions": [
+                "HashiCorp.terraform"
+            ]
+        }
+    },
+    "postCreateCommand": "bash -i -c 'pre-commit install'",
+    "containerEnv": {
+        "USER": "${localEnv:USER}"
+    }
+}
