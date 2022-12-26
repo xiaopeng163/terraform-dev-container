@@ -8,12 +8,10 @@
                 "files.trimTrailingWhitespace": true
             },
             "extensions": [
-                "HashiCorp.terraform"
+                "HashiCorp.terraform",
+                "ms-python.python"
             ]
         }
     },
-    "postCreateCommand": "bash -i -c 'pre-commit install'",
-    "containerEnv": {
-        "USER": "${localEnv:USER}"
-    }
+    "postCreateCommand": "bash -i -c 'pre-commit install'"
 }

@@ -10,6 +10,9 @@ ENV SHELL /bin/bash
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir pre-commit
 
+# install tflint
+RUN curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+
 # install terraform
 RUN curl \
     --location \
