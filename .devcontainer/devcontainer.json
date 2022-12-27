@@ -13,5 +13,6 @@
             ]
         }
     },
-    "postCreateCommand": "bash -i -c 'pre-commit install'"
+    "postCreateCommand": "bash -i -c 'pre-commit install'",
+    "runArgs": ["--env-file",".devcontainer/devcontainer.env"]
 }
